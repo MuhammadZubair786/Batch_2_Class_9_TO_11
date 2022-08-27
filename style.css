@@ -1,0 +1,9 @@
+
+
+p[class~="data"]{
+    color: red;
+}
+
+img[alt$="C"]{
+    width: 100px;
+}
