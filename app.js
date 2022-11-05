@@ -1,60 +1,77 @@
-// var numb1 = parseInt(prompt("Enter Number 1","0"))
-// var numb2 = parseInt(prompt("Enter Number 2","0"))
-// var op = prompt("Enter Operation")
-// if(op == "+"){
-//     var sum = numb1+numb2
-//     console.log("Sum of "+ numb1 + " and " + numb2 + " result is "+ sum)
+// // A=4
+// // var inp = parseInt(prompt(""))
+
+// // if(inp==A){
+// //     console.log("Correct")
+// // }
+// // else if(inp+1==A){
+// //     console.log("Close enough to the correct answer")
+// // }
+// // else{
+// //     console.log("Incorrecct")
+// // }
+
+// A= (Math.random()*100).toFixed()
+// alert(A)
+
+// var inp = parseInt(prompt(""))
+
+// if(inp==A){
+//     console.log("Correct")
 // }
-// else if(op == "-"){
-//     var sub = numb1-numb2
-//     console.log("SUBTRACTION of "+ numb1 + " and " + numb2 + " result is "+ sub)
+// else if(inp+1==A){
+//     console.log("Close enough to the correct answer")
 // }
 // else{
-//     console.log("You eNTER iNVALID sTATAEMENT")
+//     console.log("Incorrecct")
 // }
-// var a1 = [1,2,3,4,5,"Hello",4,"data"]
+
+// a=prompt()
+// var b =a%3
+// console.log(b)
+// if(b == 0){
+//     console.log("3 is divide")
+
+// }
+// else{
+//     console.log("not divisible")
+// }
+
+// var a1=prompt("Enter Number",5)
 // console.log(a1)
-// console.log(a1[4])//access single element 
-// // add new data :
-// // push=>function //add in last new data 
-// a1.push(45)
-// console.log(a1)
-// a1.pop() //last value remove 
-// console.log(a1)
+// if(a1=="" || a1==undefined){
+//     document.write("enter correct data")
+// }
+// else{
+//     document.write("<b class='table'>"+a1+"* "+ 1 +" ="+a1*1)
+//     document.write("<br/>"+a1+"* "+ 2 +" ="+a1*2)
+//     document.write("<br/>"+a1+"* "+ 3 +" ="+a1*3)
+//     document.write("<br/>"+a1+"* "+ 4 +" ="+a1*4)
+//     document.write("<br/>"+a1+"* "+ 5 +" ="+a1*5+"<b>")
+// }
 
-// console.log(a1.length)//count elements
-// console.log(a1.slice(2,5))//2,4
-// // console.log(a1.indexOf(4))
-// console.log(a1.lastIndexOf(4))
+var char = prompt("Enter Character")
+console.log(char.length)
+if(char.length==0){
+    alert("Must Enter One Chaarcter")
+}
+else if(char.length==1){
+    console.log("check character")
+    console.log(char.charCodeAt(0))
+    var getacii = char.charCodeAt(0)
+    if(getacii>=65  && getacii<=90){
+        document.write("Capital Letter Enter")
 
-// var arr1=[1,2,3,"ali","asad",true,45]
-// console.log(arr1)
-// arr1.splice(3,1,"Hyderabad")
-// console.log(arr1)
+    }
+    else if(getacii>=97  && getacii<=122){
+        document.write("small Letter Enter")
 
-// var a1=["smit","new","data"]
-// console.log(a1.join(" "))//arr to string
+    }
+    else if(getacii>=48  && getacii<=57){
+        document.write("number  Enter")
 
-// var data ="smithyderabad"
-// console.log(data.split("d"))//string to array
-
-var data =[1,2,"ali"]
-
-data.unshift("Smit Hyderabad",23,78)
-console.log(data)
-
-data.shift()
-console.log(data)
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
+else{
+    console.log("only enter one cha")
+}
