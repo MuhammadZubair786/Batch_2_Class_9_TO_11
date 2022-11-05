@@ -1,155 +1,54 @@
-
-// b=--a
-// console.log(b,a)
-//11
-//1 0
-// 1 1
-//00
-// a=3
-// b = a + a++  - a-- + a -  --a
-// console.log(b,a)
-
-// a=5
-// b= ++a - --a + a - a++ + --a + a
-    // 6 - 5 + 5 - 5 +  5 + 5
-    // console.log(b)
-
-//5,11,12,14
-
-    // 3 + 3 - 4 + 3 - 2
-//4
-//5
-//6
-//7
-//10
-//11
-//0
-
-// document.write("Hello world Hello world ")
-// document.write("")
-
-// var inp = prompt("Enter Number","12")
-// document.write(inp)
-
-// var inp = prompt("Enter Number")
-// var len = (inp.length)
-// if(len==0){
-//     document.write("Please enter data")
+// var numb1 = parseInt(prompt("Enter Number 1","0"))
+// var numb2 = parseInt(prompt("Enter Number 2","0"))
+// var op = prompt("Enter Operation")
+// if(op == "+"){
+//     var sum = numb1+numb2
+//     console.log("Sum of "+ numb1 + " and " + numb2 + " result is "+ sum)
+// }
+// else if(op == "-"){
+//     var sub = numb1-numb2
+//     console.log("SUBTRACTION of "+ numb1 + " and " + numb2 + " result is "+ sub)
 // }
 // else{
-//     document.write(inp)
+//     console.log("You eNTER iNVALID sTATAEMENT")
 // }
+// var a1 = [1,2,3,4,5,"Hello",4,"data"]
+// console.log(a1)
+// console.log(a1[4])//access single element 
+// // add new data :
+// // push=>function //add in last new data 
+// a1.push(45)
+// console.log(a1)
+// a1.pop() //last value remove 
+// console.log(a1)
 
-// var a =5
-// var a1= typeof a
-// var b="5"
-// var b1 = typeof b
-// var c = a===b
-// console.log(a1,b1)
-// console.log(c) //true
+// console.log(a1.length)//count elements
+// console.log(a1.slice(2,5))//2,4
+// // console.log(a1.indexOf(4))
+// console.log(a1.lastIndexOf(4))
 
+// var arr1=[1,2,3,"ali","asad",true,45]
+// console.log(arr1)
+// arr1.splice(3,1,"Hyderabad")
+// console.log(arr1)
 
-// a=parseInt("9")
-// b=parseInt("8")
-// c=parseInt("10") 
-// var inp1= parseInt(prompt())
-// if(a>b && a>c ){
-//     console.log("a is greater")
-// }
-// else if(b>a && b>c){
-//     console.log("b is greater")
+// var a1=["smit","new","data"]
+// console.log(a1.join(" "))//arr to string
 
-// }
-// else if(c>a && c>b){
-//     console.log("c is greater")
+// var data ="smithyderabad"
+// console.log(data.split("d"))//string to array
 
-// }
+var data =[1,2,"ali"]
 
-a=25 //global variable
-b=50
-c=10
-console.log(E)
-if(a>b && a>c){
-    var E=10 //block local variable 
-    //true
-    document.write("A is g")
-    if(b>c){
-        document.write("B is Med")
-        document.write("C is small")
+data.unshift("Smit Hyderabad",23,78)
+console.log(data)
 
-    }
-    else{
-        document.write("C is Med")
-        document.write("B is Small")
-    }
-
-}
-else if(b>a && b>c){
-    document.write("B is g")
-    if(a>c){
-        document.write("A is med")
-        document.write("C is small")
-
-    }
-    else{
-        document.write("c is med")
-        document.write("A is small")
-
-    }
-}
-else if(c>b && c>a){
-    document.write("C is g")
-    if(b>a){
-        document.write("B is med")
-        document.write("A is small")
-    }
-    else{
-        document.write("A is med")
-        document.write("b is small")
-    }
-}
+data.shift()
+console.log(data)
 
 
 
-// if(a>b){
-//   //block scope  
-//   console.log(a + "is Greater ")
-// }
-// else{
-//     console.log(b + "is Greater ")
 
-// }
-
-// Task no 1 chapter 3
-
-// var age = prompt(("Enter age"))
-// alert("HFDGS "+age)
-
-var user ="a"
-var qty =10
-var product="Laptop"
-
-var b = a= c = 10
-
-document.write("<br>"+user + " Order  is dfbdf "+ 10 + "" +product)
-
-document.write("<br>"+"<h1>Display this in your browser</h1>")
-
-document.write("Variable names can only contain number,$,")
-
-var a = 4
-document.writeln("<br>"+a + " * 1 =" + a*1)
-document.writeln("<br>"+a + " * 2 =" + a*2)
-document.writeln("<br>"+a + " * 2 =" + a*2)
-
-p1=650
-p2=100
-var q1 =  parseInt(prompt())
-var q2 =  parseInt(prompt())
-
-var sum = q1*p1  + q2*p2 
-
-document.write("<br>"+sum+100)
 
 
 
