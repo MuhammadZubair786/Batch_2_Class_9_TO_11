@@ -64,7 +64,7 @@ for(j of arr){
     }
 }
 
-console.log("large : "+lg+"small : "+sm)
+// console.log("large : "+lg+"small : "+sm)
 
 // for(j in arr){
 //     console.log(j)//return index 
@@ -75,3 +75,22 @@ console.log("large : "+lg+"small : "+sm)
 //     console.log(k)//retunr value 
 
 // }
+
+var newstud =new Array(100)
+
+// var edu = ["SSC"," HSC", "BCS", ]
+
+// document.write("<h1>Data </h1>")
+// for (var j in edu){
+//     document.write("<h3>"+ parseInt(parseInt(j)+1) +")"+edu[j]+"<br></h3>")
+
+// }
+
+var name =["a","b","ali"]
+var score =[100,200,300]
+
+for(var j in score){
+    document.write("Studen name "+name[j]+"s core "+ score[j]+" =" +score[j]/500*100 +"<br>")
+}
+
+
