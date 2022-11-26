@@ -1,96 +1,65 @@
 
+// do{
+//     console.log(i)
+//     i++
 
-// arr[3]
-// for(var i in arr){
-//     // i=>1
-//     // arr[0]=>1
-//     // console.log(arr[i])
-//     if(arr[i]%5!=0){
-//         arr.splice(i,1)//value remove 
-//         console.log(arr)
-//         // [2,5,18,10,15]
-//         i=i-1
-//         // break;
+    
+// }while(i<=10)
 
+// arr=[]
+// do{
+//     console.log(arr[i])
+//     i++
+// }while(i<arr.length)
 
+// i=0
+// arr=[1,2,3,4,3,5,6,7,3,4,5,3]
+// chk=3
+// do{
+//     if(arr[i]==chk){
+//         console.log(i)
+       
 //     }
+//     i++
+// }while(i<arr.length)
 
-// }
-// var arr =[1,2,25,5,18,10,15,79,50]
-// for(var i=0;i<arr.length;i++){
-//     if(arr[i]%5==0){
-//         console.log("yes")
-//     }
-//     else{
-//         arr.splice(i,1)
-//         console.log(arr)
-//         i=i-1
-//     }
-// }
+// Math Method
+// var a = Math.sin(90)
+// console.log(a.toFixed())
+// A=100.9089
+// 100.9089
+// Math.round(2)
+// 2
+// Math.round(A)
+// 101
+// A.toFixed(3)
+// '100.909'
+// Math.sqrt(4)
+// 2
+// Math.cbrt(8)
+// 2
 
-// var students = ["Asad","basil","kamran","Car","Hadi","daniyal","aqib"];
+// =15.06
+// 15.06
+// Math.ceil(a)
+// 16
+// Math.floor(a)
+// 15
 
-// for(i=0;i<students.length;i++){
-// //   console.log(students[i].charCodeAt(0))
-//   if(students[i].charCodeAt(0)==65 ||  
-//    students[i].charCodeAt(0)==97||
-//    students[i].charCodeAt(0)==66 ||  
-//    students[i].charCodeAt(0)==98 ||
-//    students[i].charCodeAt(0)==67 ||  
-//    students[i].charCodeAt(0)==99
-//    )  
-//   {
-//     console.log(students[i])
-//   }
-//   else{
-//     // console.log("Remove ",students[i])
-//     students.splice(i,1)
-//     i=i-1
-//   }
-  
-// }
+var date = new Date()
+console.log(date)
+console.log(date.getMonth())
 
-// console.log(students)
-
-arr =[1,2,4,56,78,34,82,45,-3,67]
-lg=arr[0]
-sm= arr[0]
-for(j of arr){
-    if(lg<j){
-        lg=j
-    }
-    if(sm>j){
-        sm=j
-    }
-}
-
-// console.log("large : "+lg+"small : "+sm)
-
-// for(j in arr){
-//     console.log(j)//return index 
-//     console.log(arr[j])//return value
-// }
-
-// for( k of arr){
-//     console.log(k)//retunr value 
-
-// }
-
-var newstud =new Array(100)
-
-// var edu = ["SSC"," HSC", "BCS", ]
-
-// document.write("<h1>Data </h1>")
-// for (var j in edu){
-//     document.write("<h3>"+ parseInt(parseInt(j)+1) +")"+edu[j]+"<br></h3>")
-
-// }
-
-var name =["a","b","ali"]
-var score =[100,200,300]
-
-for(var j in score){
-    document.write("Studen name "+name[j]+"s core "+ score[j]+" =" +score[j]/500*100 +"<br>")
-}
+var currentdate = new Date()
+var d_o_b = new Date("25 feb 2001")
+currentdate.getFullYear()-d_o_b.getFullYear()
+currentdate.getMonth()-d_o_b.getMonth()
+currentdate.getDate()-d_o_b.getDate()
 
 
+// console.log(date.toString().substring(0,3))
+
+currentdate = new Date()
+// currentdate.setFullYear(2020)
+currentdate.setMonth("april")
+console.log(currentdate)
