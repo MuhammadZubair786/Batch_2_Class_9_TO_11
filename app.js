@@ -1,65 +1,124 @@
+// function namecall(){
+//     var inp= prompt("enter your name ")
+//     // console.log(inp)
+//     return inp
+// }
+// //parameters
+// function showdata(name){
+//     console.log(name)
+// }
+// var data =namecall()
+// // console.log(data)
+// //arrugmnets
+// showdata(data)
+// =>function call
 
-// do{
-//     console.log(i)
-//     i++
+// 1 number inp =>
+// even or odd
 
-    
-// }while(i<=10)
+// inp =>
+// name => abc =>data show 
+// number => error: error call  
 
-// arr=[]
-// do{
-//     console.log(arr[i])
-//     i++
-// }while(i<arr.length)
-
-// i=0
-// arr=[1,2,3,4,3,5,6,7,3,4,5,3]
-// chk=3
-// do{
-//     if(arr[i]==chk){
-//         console.log(i)
-       
+// function num(){
+//     var inp = parseInt(prompt("enter number "))
+//     if(!isNaN(inp)){
+//         checkevenodd(inp)
 //     }
-//     i++
-// }while(i<arr.length)
-
-// Math Method
-// var a = Math.sin(90)
-// console.log(a.toFixed())
-// A=100.9089
-// 100.9089
-// Math.round(2)
-// 2
-// Math.round(A)
-// 101
-// A.toFixed(3)
-// '100.909'
-// Math.sqrt(4)
-// 2
-// Math.cbrt(8)
-// 2
-
-// =15.06
-// 15.06
-// Math.ceil(a)
-// 16
-// Math.floor(a)
-// 15
-
-var date = new Date()
-console.log(date)
-console.log(date.getMonth())
-
-var currentdate = new Date()
-var d_o_b = new Date("25 feb 2001")
-currentdate.getFullYear()-d_o_b.getFullYear()
-currentdate.getMonth()-d_o_b.getMonth()
-currentdate.getDate()-d_o_b.getDate()
+//     else{
+//         console.log("err")
+//     }
 
 
-// console.log(date.toString().substring(0,3))
+// }
 
-currentdate = new Date()
-// currentdate.setFullYear(2020)
-currentdate.setMonth("april")
-console.log(currentdate)
+// function checkevenodd(num){
+//     if(num%2==0 ){
+//         console.log("Number is even ")
+//     }
+//     else{
+//        console.log("odd")
+//     }
+
+// }
+// num()
+
+
+// user input=>0,9
+// abc1
+
+// username 
+
+// global,local scope
+
+
+
+// makew outside function,method
+
+// inp = 10
+
+
+
+// function getusername() {
+//     var inp = prompt("enter name")//locAL SCOPE
+//     // console.log(inp)
+//     checkvalidate(inp)
+// }
+
+// function checkvalidate(d1) {
+//     // console.log(d1)
+//     var chk = true
+//     for (var i = 0; i < d1.length; i++) {
+//         if (d1.charCodeAt(i) >= 48 && d1.charCodeAt(i) <= 57) {
+//             chk = false
+
+//         }
+//     }
+//     if (chk) {
+//         console.log("valid")
+//         checkaviable(d1)
+
+//         // github : 
+//         // already use
+
+//     }
+//     else{
+//         console.log("invaliud")
+//     }
+
+// }
+// var array=["asad","smit","baber"]
+// function checkaviable(d1){
+//     console.log(d1)
+//     var check = true
+//     for(var j=0;j<array.length;j++){
+//         if(array[j]==d1){
+//             check=false
+//         }
+//     }
+//     if(check){
+//         console.log("use now")
+//         document.write("Use this name")
+
+//     }
+//     else{
+//         console.log("already use")
+//     }
+
+// }
+
+// getusername()
+
+// user = >year =>4=
+// >number >201w=>isNaN
+// function : leap =>year%4==0
+
+
+
+
+
+
+
+
+
+
