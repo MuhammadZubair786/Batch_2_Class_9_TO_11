@@ -1,124 +1,93 @@
-// function namecall(){
-//     var inp= prompt("enter your name ")
-//     // console.log(inp)
-//     return inp
-// }
-// //parameters
-// function showdata(name){
-//     console.log(name)
-// }
-// var data =namecall()
-// // console.log(data)
-// //arrugmnets
-// showdata(data)
-// =>function call
+// // a = ["Sunday", "Monday", "Tuesday", "Wednesday"]
+// // n1 = new Date()
+// // // n1.setDate(16)
+// // console.log(n1.getDay())
+// // switch (n1.getDay()) {
+// //     case 0:
+// //         console.log(a[0])
 
-// 1 number inp =>
-// even or odd
+// //         console.log("case 0")
 
-// inp =>
-// name => abc =>data show 
-// number => error: error call  
-
-// function num(){
-//     var inp = parseInt(prompt("enter number "))
-//     if(!isNaN(inp)){
-//         checkevenodd(inp)
-//     }
-//     else{
-//         console.log("err")
-//     }
+// //         break
 
 
-// }
-
-// function checkevenodd(num){
-//     if(num%2==0 ){
-//         console.log("Number is even ")
-//     }
-//     else{
-//        console.log("odd")
-//     }
-
-// }
-// num()
+// //     case 1:
+// //         console.log(a[1])
+// //         break
 
 
-// user input=>0,9
-// abc1
+// //     case 2:
+// //         console.log(a[2])
+// //         break
 
-// username 
+// //     case 3:
+// //         console.log(a[3])
+// //         break
 
-// global,local scope
+// //     default:
+// //         console.log("data ")
+// // }
 
+// var a =20
+// var b =30
+// var op = prompt("op")
 
+// switch(op){
+//     case "+":
+//         console.log(a+b)
+//         break
+      
+//     case "-":
+//            console.log(a-b)
+//            break
+    
+/*    default :
+//     console.log("invalid op")
+// */
+// jwshdjhsd
 
-// makew outside function,method
+function imgover(){
+    // document.write("<h1>image on mouse</h1>")
+}
 
-// inp = 10
+function imgout(){
+    // document.write("<h1>image on mouse</h1>")
+}
 
+function ontextblur(th){
+    th.style.backgroundColor='red'
+}
 
+function onfoucfun(t){
+    t.style.backgroundColor='yellow'
+}
 
-// function getusername() {
-//     var inp = prompt("enter name")//locAL SCOPE
-//     // console.log(inp)
-//     checkvalidate(inp)
-// }
+function imgch1(e){
+    console.log(e)
+    e.style.height="1000px"
+    e.style.border="10px solid red"
+    e.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDe5TWvxdQQY5uTpU3GTL8fjW_veIrpi--TCkaK5Y&s"
 
-// function checkvalidate(d1) {
-//     // console.log(d1)
-//     var chk = true
-//     for (var i = 0; i < d1.length; i++) {
-//         if (d1.charCodeAt(i) >= 48 && d1.charCodeAt(i) <= 57) {
-//             chk = false
+}
 
-//         }
-//     }
-//     if (chk) {
-//         console.log("valid")
-//         checkaviable(d1)
+function chgbg(p){
+    console.log(p.innerText)
+    var getcol = p.style.backgroundColor
+    console.log(getcol)
+    if(getcol==""){
+        p.style.backgroundColor="red"
+    }
+    else if(getcol=="red"){
+        p.style.backgroundColor="yellow"
+    }
+    else{
+        p.style.backgroundColor="red"
+    }
+}
 
-//         // github : 
-//         // already use
+// function chngbg1(p){
+//     console.log(p.innerText)
+//     p.style.backgroundColor="white"
 
-//     }
-//     else{
-//         console.log("invaliud")
-//     }
-
-// }
-// var array=["asad","smit","baber"]
-// function checkaviable(d1){
-//     console.log(d1)
-//     var check = true
-//     for(var j=0;j<array.length;j++){
-//         if(array[j]==d1){
-//             check=false
-//         }
-//     }
-//     if(check){
-//         console.log("use now")
-//         document.write("Use this name")
-
-//     }
-//     else{
-//         console.log("already use")
-//     }
 
 // }
-
-// getusername()
-
-// user = >year =>4=
-// >number >201w=>isNaN
-// function : leap =>year%4==0
-
-
-
-
-
-
-
-
-
-
