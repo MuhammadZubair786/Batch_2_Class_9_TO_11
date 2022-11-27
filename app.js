@@ -62,12 +62,25 @@ function onfoucfun(t){
     t.style.backgroundColor='yellow'
 }
 
-function imgch1(e){
-    console.log(e)
-    e.style.height="1000px"
-    e.style.border="10px solid red"
-    e.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDe5TWvxdQQY5uTpU3GTL8fjW_veIrpi--TCkaK5Y&s"
+// function imgch1(e){
+//     console.log(e)
+//     // e.style.height="1000px"
+//     e.style.border="10px solid red"
+//     e.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDe5TWvxdQQY5uTpU3GTL8fjW_veIrpi--TCkaK5Y&s"
 
+// }
+
+function chgimage(e){
+    console.log(e)
+    var img1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDe5TWvxdQQY5uTpU3GTL8fjW_veIrpi--TCkaK5Y&s"
+    var img2 ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrKtoxrp8nOxak7ZL3xDVW-bs0C7UBkXy07oa95I4A&s"
+    if(e.src==img1){
+        e.src=img2
+
+    }
+    else {
+        e.src=img1
+    }
 }
 
 function chgbg(p){
