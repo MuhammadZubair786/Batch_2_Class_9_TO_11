@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .show {
+            display: inline;
+        }
+
+        .hide {
+            display: none;
+        }
+        .red
+        {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <form action="">
+
+
+
+
+        <input type="text" name="" id="email" placeholder="email">
+        <b class="red hide" id="emailtxt">enter your email</b>
+        <input type="password" name="" id="password" placeholder="password">
+        <b class="red hide" id="passwordtxt">enter your password</b>
+
+        <button onclick="chngtype()" class="hide" id="eye"> eye</button>
+        <br>
+        <select id="SELECTCTRY" onchange="setnumb()">
+            <option value="" disabled selected>select country </option>
+            <option value="pak">Pak</option>
+            <option value="ind">India</option>
+            <option value="sa">SA</option>
+
+        </select>
+
+        <select id="setpkprovince" class="hide">
+            <option value="" disabled selected>select country </option>
+            <option value="punjab">punjab</option>
+            <option value="sindh">sindh</option>
+            <option value="kpk">kpk</option>
+
+        </select>
+
+        <select id="setindprovince" class="hide">
+            <option value="" disabled selected>select country </option>
+            <option value="punjab">P2</option>
+            <option value="data1">I2</option>
+            <option value="kpk1">SA2</option>
+
+        </select>
+        <b class="red hide" id="cntrytxt">enter select cntry</b>
+
+
+        <input type="text" name="" id="settext" readonly size="4">
+
+
+        <button onclick="chkdata()"> click</button>
+
+    </form>
+
+
     <script src="app.js"></script>
 </body>
+
 </html>
