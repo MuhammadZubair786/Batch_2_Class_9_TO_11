@@ -1,91 +1,101 @@
-// // var data = document.getElementsByTagName("div")
-// // console.log(data[0].innerHTML)
-// // data[0].innerHTML="<b>hello</b>"
-// // console.log(data[0].innerHTML)
-// // data[1].innerText="hello user"
-// // for(var i=0;i<data.length;i++){
-// //     data[i].style.color="red"
-// // }
+// // var h1 = document.getElementsByTagName("h1")
+// // console.log(h1[0].hasAttribute("style"))//check 
 
-// // data[2].innerText+=`
-// // <p>
-// // hello user</p>
-// // <b>bold</b>
-// // `
+// // var bt = document.getElementsByTagName("button")
+// // console.log(bt[1])
 
-// // var chk = document.getElementById("h1")
-// // // console.log(chk.innerHTML)
-// // var p2 = chk.getElementsByTagName("p")
-// // console.log(p2)
-// // console.log(p2[0].innerText)
-// // p2[0].innerText="data user"
-// // p2[1].style.color="red"
+// // var but1 = document.getElementById("data")
+// // but1.addEventListener("mouseover",function(){
+// //     // alert("click")
+// //     var chl = h1[0].hasAttribute("class")
+// //     console.log(  h1[0].classList)
+// //     // h1[0].classList
+// //     // h1[0].setAttribute("class","col")
+// //     h1[0].classList="col"
+   
+// //     console.log(bt[1].getAttribute("disabled"))
+// //     if(bt[1].getAttribute("disabled")){
+// //         bt[1].removeAttribute("disabled")
 
-// // var data = document.childNodes[1].childNodes[2].childNodes[9].childNodes[2]
-// // console.log(data.nodeType)
-// // if(data.nodeType==3){
-// //     console.log("chk")
-// //    var chk1=  document.childNodes[1].childNodes[2].childNodes[9].childNodes[3]
-// // console.log(chk1.innerText)
-// // }
+// //     }
+// //     else{
+// //         bt[1].setAttribute("disabled",true)
+// //     }
+// // //    if(chl){
+// // //     console.log("checvk ")
+// // //     console.log(h1[0].style.display)
+// // //     if(h1[0].style.display=="none"){
+// // //         h1[0].style.display="block"
+// // //     }
+// // //     else{
+// // //         h1[0].style.display="none"
+// // //     }
 
-// // var data = document.getElementById("h1")
-// // var chkl = data.childNodes
-// // console.log(data.parentNode)
-// // if(chkl.firstChild.nodeType==3){
-// //     console.log(chkl[1])
+// // //    }
+// //     // if(chl){
+// //     //     console.log("style attr set")
+// //     //     var setdata = h1[0].getAttribute("style")
+// //     //     // console.log(setdata)
+        
+// //     // //    
+// //     //     h1[0].setAttribute("style",`${setdata}display:none`)
+        
+      
+       
 
-// // }
+// //     // }
+// //     // else{
+// //     //     h1[0].setAttribute("style","display:block")
+// //     // }
+// // })
 
-// // var data = document.getElementById("h1")
-// // console.log(data.childNodes[1])
+// var inp = document.getElementsByTagName("input")
+// var btn = document.getElementsByTagName("button")
+// var ul  =document.getElementsByTagName("ul")
 
-// // console.log(data.childNodes[1].innerText)
+// var del = document.getElementById("del")
+// console.log(inp)
+// btn[0].addEventListener("click",function(){
+//     var elem = document.createElement("LI") //tag make
+//     // console.log(elem)
+//     var textnode = document.createTextNode(inp[0].value)
+//     // var text = inp[0].value
+//     // console.log(text)
+//     elem.appendChild( textnode)
+//     // console.log(elem)
+//     ul[0].appendChild(elem)
 
-// var ullist= document.getElementById("data")
+//     b1= document.createElement("button")
+//     textb1 = document.createTextNode("Edit")
+//     b1.appendChild(textb1)
+//     b1.setAttribute("onclick",`edit(this)`)
+//     console.log(b1)
+//    b1.setAttribute("class","class1")
+//    elem.setAttribute("style","margin:10px")
 
-// // console.log(chk.childNodes[3].innerText="new")
-// var li1 = ullist.getElementsByTagName("li")
-// console.log(li1.length)
-// var i= 0
-// var b1 = document.getElementById("b1")//button
-// var inp = document.getElementById("text")//inp
-// b1.addEventListener("click",function(){
-//     if(i>=li1.length){
-//         alert("Time over")
-//     }
-//     else{
-//         li1[i].innerText=inp.value
-//         li1[i].removeAttribute("class")
-//     }
-//     i +=1
-    
+//    elem.appendChild(b1)
+
+//    b1= document.createElement("button")
+//     textb1 = document.createTextNode("Delete")
+//     b1.appendChild(textb1)
+//     b1.setAttribute("onclick",`delet(this)`)
+//     elem.appendChild(b1)
 // })
 
-var h1 = document.getElementsByTagName("h1")
-console.log(h1)
+// function delet(e){
+//     // console.log(e.parentNode)
+//     e.parentNode.remove()
 
-var data = document.getElementById("data")
+// }
 
-function abc(){
-    
-   h1[0].setAttribute("id","ge")
+// function edit(e){
+// var data = e.parentNode.childNodes[0]
+// console.log(data)
+// var p = prompt("enter data ",data.nodeValue)
+// e.parentNode.childNodes[0].nodeValue= p
+// }
 
-   var d = document.getElementById("ge")
-
-d.addEventListener("click",function(){
-    console.log("hello new user")
-})
-
-}
-
-
-
-
-
-function data1(){
-    alert("ok")
-    h1[0].removeAttribute("onclick")
-}
-
-data.addEventListener("click", ()=> abc())
+// del.addEventListener("click",function(){
+//     console.log("hdgshgd")
+//     ul[0].innerHTML=""
+// })
