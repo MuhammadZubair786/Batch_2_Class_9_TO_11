@@ -1,0 +1,27 @@
+object 
+object 
+
+auth=>authetication
+sign up ,sign in ,phone otp,facebook 
+
+db =>hash format
+
+database 
+real time=>ref
+firestore=>docs
+
+order
+push 
+set 
+ 
+
+
+
+
+
+
+
+
+
+
+
