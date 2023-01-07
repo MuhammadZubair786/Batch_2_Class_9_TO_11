@@ -1,101 +1,115 @@
-// // var h1 = document.getElementsByTagName("h1")
-// // console.log(h1[0].hasAttribute("style"))//check 
+// console.log(firebase.database())
+var email = document.getElementById("email")
+var password = document.getElementById("password")
+var signup = document.getElementById("signup")
+var signin = document.getElementById("signin")
+var signout = document.getElementById("signout")
 
-// // var bt = document.getElementsByTagName("button")
-// // console.log(bt[1])
 
-// // var but1 = document.getElementById("data")
-// // but1.addEventListener("mouseover",function(){
-// //     // alert("click")
-// //     var chl = h1[0].hasAttribute("class")
-// //     console.log(  h1[0].classList)
-// //     // h1[0].classList
-// //     // h1[0].setAttribute("class","col")
-// //     h1[0].classList="col"
+signup.addEventListener("click", function () {
+    // console.log(email.value)
+    // console.log(password.value)
+    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+        .then((user) => {
+            console.log(user.user.uid)
+
+            localStorage.setItem("email",email.value)
+
+            localStorage.setItem("uid",user.user.uid)
+
+            // signup.setAttribute("style","display:none")
+            // signin.setAttribute("style","display:none")
+
+            var obj = {
+                name : "smit",
+                email:email.value,
+                password:password.value,
+                role: "user",
+                uid:user.user.uid
+            }
+
+            // send data : 
+            // firebase.database().ref("users/").push(obj)
+            // firebase.database().ref("users/").child(user.user.uid).push(obj)
+
+            firebase.database().ref("users/").child(user.user.uid).set(obj)
+
+
+
+            firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+                .then((user) => {
+                    console.log(user.user.uid)
+
+
+
+
+
+                })
+                .catch((err) => {
+                    alert(err.message)
+                })
+
+
+
+        })
+        .catch((e) => {
+            // console.log(console.log(e.message))
+            alert(e.message)
+        })
+})
+
+
+signin.addEventListener("click", function () {
+    firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+        .then((user1) => {
+            console.log(user1.user)
+            
+
+            localStorage.setItem("uid",user1.user.uid)
+
+            // window.location.href="new.html"
+
+            window.location.replace("new.html") //page change
+
+            // signup.setAttribute("style","display:none")
+            // signin.setAttribute("style","display:none")
+            // signout.removeAttribute("style")
+
+
+
+
+
+
+        })
+        .catch((err) => {
+            alert(err.message)
+        })
+})
+
+// var getuid = localStorage.getItem("uid")
+// console.log(getuid)
+// if(getuid!=null){
+//     signup.setAttribute("style","display:none")
+//     signin.setAttribute("style","display:none")
+//     signout.removeAttribute("style")
+
+// }
+
+// signout.addEventListener("click",function(){
+//     firebase.auth().signOut()
+// })
+
+
+
+function Student(name,class1){
+   this.name= name
+   this.class1= class1
    
-// //     console.log(bt[1].getAttribute("disabled"))
-// //     if(bt[1].getAttribute("disabled")){
-// //         bt[1].removeAttribute("disabled")
+}
 
-// //     }
-// //     else{
-// //         bt[1].setAttribute("disabled",true)
-// //     }
-// // //    if(chl){
-// // //     console.log("checvk ")
-// // //     console.log(h1[0].style.display)
-// // //     if(h1[0].style.display=="none"){
-// // //         h1[0].style.display="block"
-// // //     }
-// // //     else{
-// // //         h1[0].style.display="none"
-// // //     }
+var std1 = new Student("asad",13)
+var std2 = new Student("ali")
 
-// // //    }
-// //     // if(chl){
-// //     //     console.log("style attr set")
-// //     //     var setdata = h1[0].getAttribute("style")
-// //     //     // console.log(setdata)
-        
-// //     // //    
-// //     //     h1[0].setAttribute("style",`${setdata}display:none`)
-        
-      
-       
+console.log(std1,std2)
 
-// //     // }
-// //     // else{
-// //     //     h1[0].setAttribute("style","display:block")
-// //     // }
-// // })
 
-// var inp = document.getElementsByTagName("input")
-// var btn = document.getElementsByTagName("button")
-// var ul  =document.getElementsByTagName("ul")
-
-// var del = document.getElementById("del")
-// console.log(inp)
-// btn[0].addEventListener("click",function(){
-//     var elem = document.createElement("LI") //tag make
-//     // console.log(elem)
-//     var textnode = document.createTextNode(inp[0].value)
-//     // var text = inp[0].value
-//     // console.log(text)
-//     elem.appendChild( textnode)
-//     // console.log(elem)
-//     ul[0].appendChild(elem)
-
-//     b1= document.createElement("button")
-//     textb1 = document.createTextNode("Edit")
-//     b1.appendChild(textb1)
-//     b1.setAttribute("onclick",`edit(this)`)
-//     console.log(b1)
-//    b1.setAttribute("class","class1")
-//    elem.setAttribute("style","margin:10px")
-
-//    elem.appendChild(b1)
-
-//    b1= document.createElement("button")
-//     textb1 = document.createTextNode("Delete")
-//     b1.appendChild(textb1)
-//     b1.setAttribute("onclick",`delet(this)`)
-//     elem.appendChild(b1)
-// })
-
-// function delet(e){
-//     // console.log(e.parentNode)
-//     e.parentNode.remove()
-
-// }
-
-// function edit(e){
-// var data = e.parentNode.childNodes[0]
-// console.log(data)
-// var p = prompt("enter data ",data.nodeValue)
-// e.parentNode.childNodes[0].nodeValue= p
-// }
-
-// del.addEventListener("click",function(){
-//     console.log("hdgshgd")
-//     ul[0].innerHTML=""
-// })
