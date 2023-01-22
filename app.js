@@ -1,98 +1,76 @@
-// for(var i=0;i<=10;i++){
-//     for(var j=0;j<=10;j++){
-//         if(i==0 || i==10 || j==0 || j==10){
-//         document.write("*")
-//         }
-//         else{
-//             document.write("&nbsp;&nbsp;")
-//         }
-//     }
-//     document.write("<br>")
-// }
+console.log(firebase.auth())
 
-// for(var i=0;i<10;i=i+2){
-//     for(var j=10;j>i;j--){
-//         document.write("&nbsp;")
-//     }
-//     for(var k=i+1;k>0;k--){
-//         document.write("*")
-//     }
-
-//     document.write("<br>")
-// }
-// for(i=10;i>0;i=i-2){
-//     if (i!=10){
-//     for(var j=10;j>=i-1;j--){
-//         document.write("&nbsp")
-//     }
-//     for(var k=i-1;k>0;k--){
-//         document.write("*")
-//     }
-//     document.write("<br>")
-// }
-
-// }
-
-
-// for(var k=i+1;k>0;k--){
-//     document.write("*")
-// }
-
-// for(var a=0;a<10;a++){
-
-//     for(var b=a;b<10;b++){
-//         document.write("&nbsp;&nbsp")
-//     }
-//     for(var c=0;c<a*2-1;c++){
-//         document.write("*")
-//     }
-//     document.write("<br>")
-// }
-// for(var a=10;a>0;a--){
-
-//     for(var b=a;b<10;b++){
-//         document.write("&nbsp;&nbsp")
-//     }
-//     for(var c=0;c<a*2-1;c++){
-//         document.write("*")
-//     }
-//     document.write("<br>")
-// }
-
-
-var array = [
-    [1, 2, 6, 3, 6, 8, 9, 6],
-    [4, 5, 6],
-    6,
-    [4, 5, 6, 6],
-    10,
-    [2, 3, 4],
-    6,
-    10
-]
-
-for (var i = 0; i < array.length; i++) {
-    var chk = 0; //chk element 
-
-    if (array[i].length == undefined) {
-        console.log("call")
-        if (array[i] == 6) {
-            document.write((chk + 1 + "<br>"))
-        }
-        else {
-            document.write(0 + "<br>")
-        }
+var email = document.getElementById("email")
+var password = document.getElementById("password")
+var name1 = document.getElementById("name")
+var signup = document.getElementById("signup")
+var signin = document.getElementById("signin")
+var role = document.getElementsByName("user")
+var getrole = ""
+signup.addEventListener("click", function () {
+    console.log(email.value)
+    console.log(password.value)
+    for (var i = 0; i < role.length; i++) {
+        if (role[i].checked) {
+            getrole = role[i].value
+            break
+        }0
+    }
+    if (getrole == "") {
+        alert("select role")
     }
     else {
-        console.log(array[i].length)
-        for (var j = 0; j < array[i].length; j++) {
-            if (array[i][j] == 6) {
-                chk += 1
-            }
-        }
-        document.write(" <br>" + chk + "<br>")
+        console.log(getrole)
     }
 
+    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+        .then(async (userdata) => {
+            console.log(userdata.user.uid)
+
+            var obj = {
+                username: name1.value,
+                email: email.value,
+                password: password.value,
+                role: getrole,
+                USER_UID: userdata.user.uid
+            }
+
+            await firebase.database().ref(`${getrole.toString()}/`)
+            .child(userdata.user.uid.toString()).set(obj)
+            alert("user reg")
+
+        })
+        .catch((err) => {
+            // console.log(err)
+            alert(err)
+        })
+})
 
 
-}
+signin.addEventListener("click", function () {
+    console.log(email.value)
+    console.log(password.value)
+    firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+        .then((userdata) => {
+            console.log(userdata.user.uid)
+            firebase.database().ref("Admin/").child(userdata.user.uid)
+            .once("value", (snap) => {
+                console.log(snap.toJSON())
+                if (snap.toJSON() == null) {
+                    firebase.database().ref("user/").child(userdata.user.uid).once("value", (snap) => {
+                        console.log(snap.toJSON())
+                        window.location.replace("user_panel.html")   
+                    })
+                }
+                else {
+                    console.log("Admin panel")
+                    window.location.replace("Admin_panel.html")
+                }
+            })
+        })
+        .catch((err) => {
+            // console.log(err)
+            alert(err)
+        })
+})
+
