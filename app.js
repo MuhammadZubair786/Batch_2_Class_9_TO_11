@@ -1,98 +1,161 @@
-// for(var i=0;i<=10;i++){
-//     for(var j=0;j<=10;j++){
-//         if(i==0 || i==10 || j==0 || j==10){
-//         document.write("*")
+// let abc = (...c1)=>{
+//     console.log(a,b,d,c1)
+//     console.log("rest parameters")
+// }
+// abc(23,45,56,78,978,45)
+
+
+// let largest_func=(...d)=>{
+//     let largest_value = d[0] //first save 
+//     for(var j of d ){
+//         // console.log(j)
+//         if(largest_value<j){
+//             largest_value=j
+
 //         }
-//         else{
-//             document.write("&nbsp;&nbsp;")
-//         }
 //     }
-//     document.write("<br>")
+//     console.log(largest_value)
 // }
 
-// for(var i=0;i<10;i=i+2){
-//     for(var j=10;j>i;j--){
-//         document.write("&nbsp;")
-//     }
-//     for(var k=i+1;k>0;k--){
-//         document.write("*")
-//     }
+// largest_func(34,45,67,45,345,67,34,56)
 
-//     document.write("<br>")
-// }
-// for(i=10;i>0;i=i-2){
-//     if (i!=10){
-//     for(var j=10;j>=i-1;j--){
-//         document.write("&nbsp")
-//     }
-//     for(var k=i-1;k>0;k--){
-//         document.write("*")
-//     }
-//     document.write("<br>")
+
+// var arr =[1,34,56,789]
+// for(var j of arr){
+//     console.log(j)   //=>j
 // }
 
+// var arr =[1,34,56,789]
+// for(var j in arr){
+//     console.log(arr[j])//index =>arr[j]
 // }
 
 
-// for(var k=i+1;k>0;k--){
-//     document.write("*")
+
+// let country=[
+//     "pakistan","india","Africa","China"
+// ]
+
+// let B = country.filter((v)=>v[v.length-2]=="a")
+// console.log(B)
+
+
+
+// class Smit{
+//     constructor(name,course,age){
+//         this.name=name
+//         this.course=course
+//         this.age=age
+//     }
+//     getdetail(){
+//         console.log(this.name)
+//     }
 // }
 
-// for(var a=0;a<10;a++){
+// var std1 = new Smit("asad","SMIT",20)
+// std1.getdetail()
+// console.log(std1.name)
 
-//     for(var b=a;b<10;b++){
-//         document.write("&nbsp;&nbsp")
+// var std2 = new Smit("Ali","SMIT web",20)
+// console.log(std2.name)
+
+
+// class Smit{
+//     constructor(center,course){
+//         this.center=center
+//         this.course=course
 //     }
-//     for(var c=0;c<a*2-1;c++){
-//         document.write("*")
+//  getdata(a,b){
+//         // console.log(`center name is : ${this.center}  course  : ${this.course}`)
+//         return a*b
 //     }
-//     document.write("<br>")
+
 // }
-// for(var a=10;a>0;a--){
 
-//     for(var b=a;b<10;b++){
-//         document.write("&nbsp;&nbsp")
+// class Batch extends Smit {
+//     constructor(center,course,Batch){
+//         super(center,course)//
+//         this.Batch=Batch
+       
 //     }
-//     for(var c=0;c<a*2-1;c++){
-//         document.write("*")
+    
+//     getdata(a,b){
+//       console.log(a+b)
+//         // console.log(`center name is : ${this.center}  course  : ${this.course} batch anme  ${this.Batch}`)
+
 //     }
-//     document.write("<br>")
+
+//     getcalldata(a1,b1){
+//        let a =  super.getdata(a1,b1)
+//        console.log(a)
+//     }
+   
 // }
 
 
-var array = [
-    [1, 2, 6, 3, 6, 8, 9, 6],
-    [4, 5, 6],
-    6,
-    [4, 5, 6, 6],
-    10,
-    [2, 3, 4],
-    6,
-    10
-]
+// let center1 = new Batch("SMIT","WEB & APP",2)
+// // center1. getcalldata(4,5)
+// center1.getdata(4,6)//call child function 
+// center1.getcalldata(4,5)
+// Smit.getdata()
 
-for (var i = 0; i < array.length; i++) {
-    var chk = 0; //chk element 
+// arrow function,let ,fetch,map,filter
 
-    if (array[i].length == undefined) {
-        console.log("call")
-        if (array[i] == 6) {
-            document.write((chk + 1 + "<br>"))
+// let b = new Smit("dhjhd","jdhjhd")
+// console.log(b.getdata(4,5))
+
+// fetch 
+// data =>Array
+// cat=>
+// button
+
+// fetch data all and store in two diffe array 
+let all_product=[]
+let cat=new Set()
+var btn = document.getElementById("btn1")
+let fetch_data = ()=>{
+    let data_promise = new Promise(async(res,rej)=>{
+   await  fetch("https://fakestoreapi.com/products")
+    .then((data)=>{
+        if(data){
+            res(data.json())
+
         }
-        else {
-            document.write(0 + "<br>")
+        else{
+            rej("not get ")
         }
-    }
-    else {
-        console.log(array[i].length)
-        for (var j = 0; j < array[i].length; j++) {
-            if (array[i][j] == 6) {
-                chk += 1
-            }
-        }
-        document.write(" <br>" + chk + "<br>")
-    }
+        
+           
+        })
+    })
+    data_promise.then((result)=>{
+        result.map((v,i)=>{
+            console.log(v)
+            all_product.push(v)
+            cat.add(v.category)
 
-
+        })
+        console.log(cat)
+        console.log(all_product)
+        abc()
+        let data = Array.from(cat);
+        data.map((v,i)=>{
+            btn.innerHTML+=`
+            <button>${v}</button>
+            `
+        })
+    })
+    .catch((e)=>{
+        console.log(e)
+    })
 
 }
+
+ fetch_data()
+ 
+
+ let abc=()=>{
+    console.log(all_product)
+ }
+
+
